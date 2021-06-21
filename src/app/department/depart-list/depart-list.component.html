@@ -1,0 +1,22 @@
+<div class="container border border-1 border-primary; ">
+
+    <div class="row px-3 border border-1 border-primary ; ">
+        <div class="col lg-4 md-4 ">Id</div>
+        <div class="col lg-4 md-4 ">Name</div>
+        <div class="col lg-4 md-4 ">Capacity</div>
+        <div class="col lg-4 md-4 ">operation</div>
+
+
+    </div>
+    <div class="row p-3 border border-1 border-primary " *ngFor="let item of departments ; let f=even let o=odd" [ngClass]="{'bgred': f,'bggray':o}">
+        <div class=" col lg-4 md-4 ">{{item.departid}}</div>
+        <div class="col lg-4 md-4 ">{{item.departname}}</div>
+        <div class="col lg-4 md-4 "> {{item.capacity}}</div>
+        <div class="col lg-4 md-4 ">
+            <!-- <button (click)="show(a.departid) "></button> -->
+            <button (click)="departserve.details(item.departid) ">Details</button>
+            <button (click)="departserve.Deletedepart(item.departid) ">Delete</button>
+            <button (click)="departserve.Edit(item.departid) ">Edit</button>
+        </div>
+    </div>
+</div>

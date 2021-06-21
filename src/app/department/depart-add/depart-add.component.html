@@ -1,0 +1,8 @@
+<input type="button" [value]="btnValue" (click)="showAndHide()">
+<div class="mx-3" *ngIf="addFalg">
+    <h1>Add New Department</h1>
+    <input type="text" [(ngModel)]="dept.departid" placeholder="id">
+    <input type="text" [(ngModel)]="dept.departname" placeholder="name">
+    <input type="text" [(ngModel)]="dept.capacity" placeholder="capacity">
+    <button (click)=save()>Save</button>
+</div>
