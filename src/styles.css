@@ -1,15 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('../node_modules/bootstrap/dist/css/bootstrap.min.css');
-button {
-    background-color: blue;
-    color: white;
+[type=button] {
+    background-color: white;
+    color: blue;
     padding: 5px;
     margin: 5px;
-    border-radius: 20%;
+    font-size: larger;
 }
 
-button:hover {
+[type=button]:hover {
     background-color: red;
     color: white;
 }
