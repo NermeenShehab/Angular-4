@@ -1,4 +1,28 @@
-<div class="container border border-1 border-primary; ">
+<table class="table table-bordered table-hover  table-light p-5">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Capacity</th>
+            <th>operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of departments ">
+            <td>{{item.departid}}</td>
+            <td>{{item.departname}}</td>
+            <td> {{item.capacity}}</td>
+            <td>
+                <button class="btn btn-outline-primary m-1" (click)="departserve.details(item.departid) ">Details</button>
+                <button class="btn btn-outline-danger m-1" (click)="departserve.Deletedepart(item.departid) ">Delete</button>
+                <button class="btn btn-outline-success m-1" (click)="departserve.Edit(item.departid) ">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- <div class="container border border-1 border-primary; ">
 
     <div class="row px-3 border border-1 border-primary ; ">
         <div class="col lg-4 md-4 ">Id</div>
@@ -13,10 +37,10 @@
         <div class="col lg-4 md-4 ">{{item.departname}}</div>
         <div class="col lg-4 md-4 "> {{item.capacity}}</div>
         <div class="col lg-4 md-4 ">
-            <!-- <button (click)="show(a.departid) "></button> -->
+           
             <button (click)="departserve.details(item.departid) ">Details</button>
             <button (click)="departserve.Deletedepart(item.departid) ">Delete</button>
             <button (click)="departserve.Edit(item.departid) ">Edit</button>
         </div>
     </div>
-</div>
+</div> -->
